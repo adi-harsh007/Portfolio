@@ -1,2 +1,4 @@
-# Ignore local server from Vercel static deployment
+# Ignore local server and package.json from Vercel to guarantee pure static edge deployment
 server.js
+package.json
+package-lock.json

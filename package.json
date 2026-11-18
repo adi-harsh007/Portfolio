@@ -2,7 +2,7 @@
   "name": "aditya-harsh-portfolio",
   "version": "1.0.0",
   "description": "Aditya Harsh — 2D Interactive Game Portfolio & Full-Stack / Applied ML Engineering Showcase",
-  "main": "index.html",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "node server.js",
