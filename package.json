@@ -1,0 +1,23 @@
+{
+  "name": "aditya-harsh-portfolio",
+  "version": "1.0.0",
+  "description": "Aditya Harsh — 2D Interactive Game Portfolio & Full-Stack / Applied ML Engineering Showcase",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "interactive-game",
+    "full-stack",
+    "machine-learning",
+    "react-19",
+    "fastapi",
+    "pytorch"
+  ],
+  "author": "Aditya Harsh",
+  "license": "MIT"
+}
+

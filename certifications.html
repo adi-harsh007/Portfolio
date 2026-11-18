@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honors & Verified Certifications — Aditya Harsh</title>
+  <meta name="description" content="Verified professional credentials in Machine Learning, Cloud Architecture, Databases & Full-Stack Engineering for Aditya Harsh." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #09090b;
+      color: #f4f4f5;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .cert-card {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px -10px rgba(245, 158, 11, 0.15);
+    }
+    #certModal.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-amber-500 selection:text-black">
+
+  <!-- UNIFIED TOP NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <!-- Brand & Title Screen Return -->
+      <a href="index.html" class="flex items-center gap-2.5 text-xs font-mono-code tracking-wider text-amber-400 hover:text-amber-300 transition group" title="Return to Title Screen">
+        <span class="w-2.5 h-2.5 border border-amber-400/60 rotate-45 group-hover:bg-amber-400 transition-colors"></span>
+        <span class="font-bold">ADITYA HARSH</span>
+        <span class="text-zinc-500">//</span>
+        <span class="text-zinc-400 hidden sm:inline">TITLE SCREEN</span>
+      </a>
+
+      <!-- Page Switcher Nav -->
+      <nav class="flex items-center gap-1.5 sm:gap-2 text-xs font-mono-code">
+        <a href="recruiter.html" class="px-2.5 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 transition">
+          DOSSIER
+        </a>
+        <a href="resume.html" class="px-2.5 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 transition">
+          RESUME
+        </a>
+        <a href="certifications.html" class="px-2.5 py-1.5 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 font-bold transition">
+          CERTS (15)
+        </a>
+        <a href="game.html" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold transition shadow-md shadow-red-900/30 flex items-center gap-1">
+          <span>🎮 GAME</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 space-y-12">
+    <!-- Header Title & Filter Section -->
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-mono-code">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        15+ VERIFIED CREDENTIALS &bull; COURSERA, FREECODECAMP, W3SCHOOLS, SCALER, GOOGLE
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white font-cinzel">
+        Honors &amp; Verified Certifications
+      </h1>
+      <p class="text-zinc-400 text-sm sm:text-base max-w-2xl leading-relaxed">
+        Authentic professional credentials with verifiable hashes, digital signatures, and direct completion certificates across Applied Machine Learning, Full-Stack Architecture, and Systems Engineering.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono-code" id="filterContainer">
+        <button data-filter="all" class="filter-btn px-3 py-1.5 rounded-lg bg-amber-500 text-black font-bold">ALL (15)</button>
+        <button data-filter="ai" class="filter-btn px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700">AI &amp; MACHINE LEARNING (6)</button>
+        <button data-filter="fullstack" class="filter-btn px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700">FULL-STACK &amp; WEB (4)</button>
+        <button data-filter="db-cloud" class="filter-btn px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700">DATABASES &amp; CLOUD (4)</button>
+        <button data-filter="experience" class="filter-btn px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700">INDUSTRY INTERNSHIP (1)</button>
+      </div>
+    </div>
+
+    <!-- Certifications Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="certGrid">
+
+      <!-- 1. Industry Internship: A.M. Thermopack -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-amber-500/40 flex flex-col justify-between space-y-4" data-category="experience">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 font-bold">
+              INDUSTRY EXPERIENCE
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">May–June 2024</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/internship-am-thermopack.png', 'Internship Certificate — A.M. Thermopack')">
+            <img src="certificates/internship-am-thermopack.png" alt="Internship Certificate - A.M. Thermopack" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-amber-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Click to Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Database Developer Intern</h3>
+            <p class="text-xs text-amber-400 font-mono-code mt-0.5">A.M. Thermopack &bull; Faridabad, India</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Consolidated 500+ records into a normalized MySQL relational schema. Built structured operational queries and administrative UI.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-emerald-400">✓ Signed by Hiring Mgr</span>
+          <a href="certificates/internship-am-thermopack.pdf" target="_blank" class="text-amber-400 hover:underline">Open PDF ↗</a>
+        </div>
+      </article>
+
+      <!-- 2. IBM & Coursera: Generative AI Essentials -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/50 flex flex-col justify-between space-y-4" data-category="ai">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold">
+              IBM &bull; COURSERA
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Nov 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/ibm-coursera-genai.png', 'Generative AI Essentials — IBM Skills Network')">
+            <img src="certificates/ibm-coursera-genai.png" alt="Generative AI Essentials - IBM" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-blue-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Click to Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Generative AI Essentials: Real-World Applications</h3>
+            <p class="text-xs text-blue-400 font-mono-code mt-0.5">IBM Skills Network &bull; Antonio Cangiano &amp; Rav Ahuja</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Prompt engineering, foundational LLM models, generative architectures, and practical application pipelines authorized by IBM.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-zinc-500">ID: SMTBBKCXES0E</span>
+          <a href="https://coursera.org/verify/SMTBBKCXES0E" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Verify Coursera ↗</a>
+        </div>
+      </article>
+
+      <!-- 3. freeCodeCamp: Machine Learning with Python -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-amber-500/50 flex flex-col justify-between space-y-4" data-category="ai">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">
+              FREECODECAMP &bull; 300 HOURS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Jan 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/fcc-machine-learning.png', 'Machine Learning with Python — freeCodeCamp')">
+            <img src="certificates/fcc-machine-learning.png" alt="Machine Learning with Python" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-amber-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Machine Learning with Python</h3>
+            <p class="text-xs text-amber-400 font-mono-code mt-0.5">Developer Certification &bull; Quincy Larson</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Neural networks, TensorFlow, recurrent models, natural language processing, and deep reinforcement learning algorithms.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-zinc-500">Verified Hash</span>
+          <a href="https://freecodecamp.org/certification/aditya_harsh_7/machine-learning-with-python-v7" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline">Verify FCC ↗</a>
+        </div>
+      </article>
+
+      <!-- 4. freeCodeCamp: Data Analysis with Python -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-emerald-500/50 flex flex-col justify-between space-y-4" data-category="ai">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">
+              FREECODECAMP &bull; 300 HOURS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Jan 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/fcc-data-analysis.png', 'Data Analysis with Python — freeCodeCamp')">
+            <img src="certificates/fcc-data-analysis.png" alt="Data Analysis with Python" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-emerald-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Data Analysis with Python</h3>
+            <p class="text-xs text-emerald-400 font-mono-code mt-0.5">Developer Certification &bull; Quincy Larson</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            NumPy array vectorization, Pandas multi-index data wrangling, Matplotlib/Seaborn visualization, and statistical modeling.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-zinc-500">Verified Hash</span>
+          <a href="https://freecodecamp.org/certification/aditya_harsh_7/data-analysis-with-python-v7" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">Verify FCC ↗</a>
+        </div>
+      </article>
+
+      <!-- 5. W3Schools: Certified MongoDB Developer -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-green-500/50 flex flex-col justify-between space-y-4" data-category="db-cloud">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-green-500/10 text-green-400 border border-green-500/20 font-bold">
+              W3SCHOOLS &bull; PROFESSIONAL
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">July 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/w3schools-mongodb-developer.png', 'Certified MongoDB Developer — W3Schools')">
+            <img src="certificates/w3schools-mongodb-developer.png" alt="Certified MongoDB Developer" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-green-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Certified MongoDB Developer</h3>
+            <p class="text-xs text-green-400 font-mono-code mt-0.5">W3Schools Professional Exam &bull; Thomas Thorsell-Arntsen</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Aggregation pipelines, compound index optimization, BSON document modeling, sharding, and transactional consistency.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-zinc-500">Exam: 1045MN9VWZL</span>
+          <a href="https://verify.w3schools.com/1045MN9VWZL" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:underline">Verify W3Schools ↗</a>
+        </div>
+      </article>
+
+      <!-- 6. Google Developers: Android Development (23 Badges) -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-sky-500/50 flex flex-col justify-between space-y-4" data-category="fullstack">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-bold">
+              GOOGLE DEVELOPERS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">23 Badges Earned</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/android-dev-badges.jpeg', 'Google Developer Program — Android Badges')">
+            <img src="certificates/android-dev-badges.jpeg" alt="Google Developer Badges" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-sky-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Android Kotlin &amp; Jetpack Architecture</h3>
+            <p class="text-xs text-sky-400 font-mono-code mt-0.5">Google Developer Program &bull; KIIT Student Chapter</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Earned 23 accredited badges spanning Jetpack Compose, Room SQLite persistence, Kotlin Coroutines, WorkManager, and DataStore.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-emerald-400">23 Verified Badges</span>
+          <span class="text-zinc-400">Google Developers</span>
+        </div>
+      </article>
+
+      <!-- 7. freeCodeCamp: JavaScript Algorithms & Data Structures -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-yellow-500/50 flex flex-col justify-between space-y-4" data-category="fullstack">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 font-bold">
+              FREECODECAMP &bull; 300 HOURS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Jan 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/fcc-javascript-dsa.png', 'JavaScript Algorithms & Data Structures — freeCodeCamp')">
+            <img src="certificates/fcc-javascript-dsa.png" alt="JavaScript Algorithms" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-yellow-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">JavaScript Algorithms &amp; Data Structures</h3>
+            <p class="text-xs text-yellow-400 font-mono-code mt-0.5">Developer Certification &bull; Quincy Larson</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Object-Oriented Programming, Functional Programming paradigms, algorithmic complexity analysis, and regex parsing.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-zinc-500">Verified Hash</span>
+          <a href="https://freecodecamp.org/certification/aditya_harsh_7/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noopener noreferrer" class="text-yellow-400 hover:underline">Verify FCC ↗</a>
+        </div>
+      </article>
+
+      <!-- 8. freeCodeCamp: Responsive Web Design -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-cyan-500/50 flex flex-col justify-between space-y-4" data-category="fullstack">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">
+              FREECODECAMP &bull; 300 HOURS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Dec 2025</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/fcc-responsive-web-design.png', 'Responsive Web Design — freeCodeCamp')">
+            <img src="certificates/fcc-responsive-web-design.png" alt="Responsive Web Design" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-cyan-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Responsive Web Design</h3>
+            <p class="text-xs text-cyan-400 font-mono-code mt-0.5">Developer Certification &bull; Quincy Larson</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Modern CSS Flexbox, Grid layout, mobile-first design, web accessibility (WCAG), and responsive typography.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-zinc-500">Verified Hash</span>
+          <a href="https://freecodecamp.org/certification/aditya_harsh_7/responsive-web-design-v9" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">Verify FCC ↗</a>
+        </div>
+      </article>
+
+      <!-- 9. Scaler: Deep Learning Deep Dive -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-rose-500/50 flex flex-col justify-between space-y-4" data-category="ai">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 font-bold">
+              SCALER TOPICS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Jan 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/scaler-deep-learning.png', 'Deep Learning Deep Dive — Scaler')">
+            <img src="certificates/scaler-deep-learning.png" alt="Deep Learning Course" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-rose-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Deep Learning: Deep Dive</h3>
+            <p class="text-xs text-rose-400 font-mono-code mt-0.5">Certificate of Excellence &bull; Anshuman Singh</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            48 Video Tutorials, 3 comprehensive modules, and 3 coding challenges on backpropagation, activation functions, and deep representations.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-emerald-400">✓ Completed</span>
+          <span class="text-zinc-500">Scaler Topics</span>
+        </div>
+      </article>
+
+      <!-- 10. Scaler: Supervised Machine Learning -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-purple-500/50 flex flex-col justify-between space-y-4" data-category="ai">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20 font-bold">
+              SCALER TOPICS &bull; 119 TUTORIALS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Jan 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/scaler-supervised-ml.png', 'Supervised Machine Learning — Scaler')">
+            <img src="certificates/scaler-supervised-ml.png" alt="Supervised Machine Learning" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-purple-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Supervised Machine Learning</h3>
+            <p class="text-xs text-purple-400 font-mono-code mt-0.5">Certificate of Excellence &bull; 8 Modules &bull; 7 Challenges</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Foundations: Linear/Logistic Regression, Decision Trees, Support Vector Machines, Ensemble Methods, and model evaluation metrics.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-emerald-400">✓ Completed</span>
+          <span class="text-zinc-500">Scaler Topics</span>
+        </div>
+      </article>
+
+      <!-- 11. Scaler: Unsupervised Machine Learning -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-indigo-500/50 flex flex-col justify-between space-y-4" data-category="ai">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-bold">
+              SCALER TOPICS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Jan 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/scaler-unsupervised-ml.png', 'Unsupervised Machine Learning — Scaler')">
+            <img src="certificates/scaler-unsupervised-ml.png" alt="Unsupervised Machine Learning" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-indigo-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Unsupervised Machine Learning</h3>
+            <p class="text-xs text-indigo-400 font-mono-code mt-0.5">Certificate of Excellence &bull; 4 Modules &bull; 4 Challenges</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            K-Means clustering, Hierarchical clustering, Principal Component Analysis (PCA) dimensionality reduction, and anomaly detection.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-emerald-400">✓ Completed</span>
+          <span class="text-zinc-500">Scaler Topics</span>
+        </div>
+      </article>
+
+      <!-- 12. Scaler: React JS -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-sky-500/50 flex flex-col justify-between space-y-4" data-category="fullstack">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-bold">
+              SCALER TOPICS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Jan 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/scaler-react.png', 'React JS Course — Scaler')">
+            <img src="certificates/scaler-react.png" alt="React JS Course" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-sky-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">React JS Course</h3>
+            <p class="text-xs text-sky-400 font-mono-code mt-0.5">Certificate of Excellence &bull; 10 Modules &bull; 10 Challenges</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Virtual DOM, hooks lifecycle, custom hooks, global state patterns, synthetic events, and high-performance component rendering.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-emerald-400">✓ Completed</span>
+          <span class="text-zinc-500">Scaler Topics</span>
+        </div>
+      </article>
+
+      <!-- 13. Scaler: SQL for Beginners & Database Design -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/50 flex flex-col justify-between space-y-4" data-category="db-cloud">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold">
+              SCALER TOPICS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Jan 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/scaler-sql-mysql.png', 'SQL & Database Design — Scaler')">
+            <img src="certificates/scaler-sql-mysql.png" alt="SQL for Beginners" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-blue-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">SQL for Beginners &amp; Database Design</h3>
+            <p class="text-xs text-blue-400 font-mono-code mt-0.5">Certificate of Excellence &bull; MySQL &bull; 5 Modules</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Complex JOIN operations, subqueries, normalization (1NF–3NF), ACID compliance, and relational schema indexing strategies.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-emerald-400">✓ Completed</span>
+          <span class="text-zinc-500">Scaler Topics</span>
+        </div>
+      </article>
+
+      <!-- 14. Cursa: Serverless Framework on AWS -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-orange-500/50 flex flex-col justify-between space-y-4" data-category="db-cloud">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20 font-bold">
+              CURSA &bull; AWS
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Feb 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/cursa-aws-serverless.png', 'Serverless Framework on AWS — Cursa')">
+            <img src="certificates/cursa-aws-serverless.png" alt="Serverless on AWS" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-orange-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Serverless Framework on AWS</h3>
+            <p class="text-xs text-orange-400 font-mono-code mt-0.5">Marcia Villalba &bull; 05h 54m</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            AWS Lambda, API Gateway, DynamoDB integration, and Infrastructure-as-Code deployments via Serverless Framework.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-zinc-500">ID: r10283917</span>
+          <span class="text-orange-400">Cursa Verified</span>
+        </div>
+      </article>
+
+      <!-- 15. Cursa: Python FastAPI & Asynchronous APIs -->
+      <article class="cert-card p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-teal-500/50 flex flex-col justify-between space-y-4" data-category="db-cloud">
+        <div class="space-y-3">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20 font-bold">
+              CURSA &bull; BACKEND
+            </span>
+            <span class="text-xs font-mono-code text-zinc-400">Feb 2026</span>
+          </div>
+          <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 aspect-[4/3]" onclick="openCertModal('certificates/cursa-python-fastapi.png', 'Python FastAPI — Cursa')">
+            <img src="certificates/cursa-python-fastapi.png" alt="Python FastAPI" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition flex items-center justify-center">
+              <span class="px-3 py-1 rounded bg-zinc-900/90 text-teal-300 font-mono-code text-xs border border-zinc-700 shadow-lg">🔍 Enlarge</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white leading-snug">Python FastAPI &amp; Asynchronous APIs</h3>
+            <p class="text-xs text-teal-400 font-mono-code mt-0.5">Turtle Code &bull; Adrian Medeiros Dantas</p>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Asynchronous Python endpoints, Pydantic type validation, OpenAPI documentation generation, and dependency injection.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-mono-code">
+          <span class="text-zinc-500">ID: a3290561</span>
+          <span class="text-teal-400">Cursa Verified</span>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Interactive Lightbox Modal for Full Certificate Inspection -->
+  <div id="certModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-zinc-900 border border-zinc-700 rounded-xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+      <div class="px-6 py-4 border-b border-zinc-800 flex items-center justify-between">
+        <h3 id="modalTitle" class="text-sm font-bold text-white font-mono-code">Certificate Preview</h3>
+        <button onclick="closeCertModal()" class="text-zinc-400 hover:text-white text-xl font-mono-code px-2 py-1 rounded hover:bg-zinc-800">✕</button>
+      </div>
+      <div class="p-4 flex-1 overflow-auto flex items-center justify-center bg-zinc-950">
+        <img id="modalImg" src="" alt="Certificate" class="max-w-full max-h-[75vh] object-contain rounded" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Filter Functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.cert-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update button active styling
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-amber-500', 'text-black', 'font-bold');
+          b.classList.add('bg-zinc-800', 'text-zinc-300');
+        });
+        btn.classList.remove('bg-zinc-800', 'text-zinc-300');
+        btn.classList.add('bg-amber-500', 'text-black', 'font-bold');
+
+        // Filter cards
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Modal Preview Functionality
+    function openCertModal(src, title) {
+      const modal = document.getElementById('certModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalImg = document.getElementById('modalImg');
+
+      modalTitle.textContent = title;
+      modalImg.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeCertModal() {
+      const modal = document.getElementById('certModal');
+      const modalImg = document.getElementById('modalImg');
+      modalImg.src = '';
+      modal.classList.remove('active');
+    }
+
+    document.getElementById('certModal').addEventListener('click', (e) => {
+      if (e.target.id === 'certModal') closeCertModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeCertModal();
+    });
+  </script>
+</body>
+</html>

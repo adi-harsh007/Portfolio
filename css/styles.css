@@ -1,0 +1,99 @@
+/**
+ * "Path of the Ronin" Cinematic Portfolio Stylesheet
+ * Ghost of Yōtei Aesthetic: Crimson twilight, Japanese silk, glassmorphism
+ */
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #070304;
+  color: #f1f5f9;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.selectable-text,
+.selectable-text * {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 5, 8, 0.85);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.7);
+}
+
+/* Glassmorphism & Japanese Silk Panels */
+.glass-panel {
+  background: rgba(15, 6, 9, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.22);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.85);
+}
+
+.glass-card {
+  background: rgba(25, 12, 16, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 158, 11, 0.16);
+}
+
+.samurai-border {
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 20px -3px rgba(185, 28, 28, 0.45);
+}
+
+/* Subtle Crimson Glowing Animations */
+@keyframes flameFlicker {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.flame-glow {
+  animation: flameFlicker 3s infinite ease-in-out;
+}
+
+/* Button Micro-interactions */
+button {
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+  transform: translateY(1.5px);
+}

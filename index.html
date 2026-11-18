@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Harsh — Full-Stack Engineer & Applied AI/ML</title>
+  <meta name="description" content="Cinematic portfolio of Aditya Harsh: Full-Stack Architect & Applied AI/ML Engineer. Ghost of Yōtei inspired interactive gateway." />
+
+  <!-- Tailwind CSS CDN for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cinzel, Cinzel Decorative, Noto Serif JP, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700;900&family=Noto+Serif+JP:wght@400;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Ghost of Yōtei Custom Stylesheet -->
+  <link rel="stylesheet" href="css/yotei.css" />
+</head>
+<body>
+  <!-- 1. Background Cinematic Canvas (Mount Yōtei, Crimson Twilight, Wanderer, Wind & Momiji Leaves) -->
+  <canvas id="yoteiCanvas"></canvas>
+
+  <!-- 2. Atmospheric Vignette & Letterbox Cinema Bars -->
+  <div class="cinematic-vignette"></div>
+  <div class="letterbox-top"></div>
+  <div class="letterbox-bottom"></div>
+
+  <!-- 3. Foreground Interactive UI Layer -->
+  <main class="ui-layer">
+    <!-- Header Bar -->
+    <header class="yotei-header">
+      <div class="brand-crest">
+        <div class="mon-emblem" title="Aditya Harsh Crest"></div>
+        <span class="header-text">ADITYA HARSH // 2026</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- Direct Quick Socials -->
+        <a href="https://github.com/adi-harsh007" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-block text-xs font-mono text-neutral-400 hover:text-amber-400 transition" title="GitHub Profile">
+          GITHUB ↗
+        </a>
+        <a href="https://www.linkedin.com/in/aditya-harsh-b1738126a" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-block text-xs font-mono text-neutral-400 hover:text-amber-400 transition" title="LinkedIn Profile">
+          LINKEDIN ↗
+        </a>
+
+        <!-- Sound Toggle -->
+        <button id="soundToggle" class="sound-toggle-btn" aria-label="Toggle Audio">
+          <span class="text-amber-400">[ 音: ON ]</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Center Content: Title Block + Gateways Menu -->
+    <div class="yotei-content-grid">
+      <!-- Title Block -->
+      <section class="yotei-title-block">
+        <div class="kanji-calligraphy-vertical" aria-hidden="true">
+          陽蹄の侍
+        </div>
+
+        <div class="title-tagline">
+          GHOST OF YŌTEI // CHRONICLES
+        </div>
+
+        <h1 class="yotei-main-title">
+          ADITYA<br />HARSH
+        </h1>
+
+        <p class="yotei-subtitle">
+          FULL-STACK ARCHITECT &bull; APPLIED AI / ML
+        </p>
+
+        <div class="title-divider"></div>
+
+        <p class="mt-4 text-xs tracking-widest text-amber-200/60 uppercase font-mono max-w-md leading-relaxed">
+          B.Tech Electronics &amp; ECSE (KIIT '27) &bull; PyTorch &bull; React 19 &bull; PostgreSQL &bull; Docker
+        </p>
+      </section>
+
+      <!-- Gateways Menu (The 4 Options) -->
+      <nav class="yotei-menu" aria-label="Main Navigation">
+        <!-- Option 1: Start Game -->
+        <a href="game.html" class="yotei-menu-item active" data-index="0">
+          <div class="menu-title-row">
+            <span class="menu-kanji-num">壱</span>
+            <span class="menu-label">START EXPEDITION</span>
+          </div>
+          <p class="menu-desc">Enter the interactive 2D realm & explore engineering stations</p>
+          <span class="menu-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <!-- Option 2: Recruiter Area -->
+        <a href="recruiter.html" class="yotei-menu-item" data-index="1">
+          <div class="menu-title-row">
+            <span class="menu-kanji-num">弐</span>
+            <span class="menu-label">RECRUITER DOSSIER</span>
+          </div>
+          <p class="menu-desc">Executive one-page overview: impact metrics, architecture & tech stack</p>
+          <span class="menu-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <!-- Option 3: Resume -->
+        <a href="resume.html" class="yotei-menu-item" data-index="2">
+          <div class="menu-title-row">
+            <span class="menu-kanji-num">参</span>
+            <span class="menu-label">RESUME ARCHIVE</span>
+          </div>
+          <p class="menu-desc">ATS-optimized curriculum vitae, career history & instant PDF download</p>
+          <span class="menu-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <!-- Option 4: Certifications -->
+        <a href="certifications.html" class="yotei-menu-item" data-index="3">
+          <div class="menu-title-row">
+            <span class="menu-kanji-num">四</span>
+            <span class="menu-label">HONORS & CERTIFICATES</span>
+          </div>
+          <p class="menu-desc">15+ verified credentials: IBM, freeCodeCamp, W3Schools, Scaler & Google</p>
+          <span class="menu-arrow" aria-hidden="true">›</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Footer Controls & Hints -->
+    <footer class="yotei-footer">
+      <div class="keyboard-controls-hint">
+        <span><kbd>W</kbd> <kbd>S</kbd> or <kbd>↑</kbd> <kbd>↓</kbd> NAVIGATE</span>
+        <span><kbd>ENTER</kbd> SELECT</span>
+        <span><kbd>1</kbd>-<kbd>4</kbd> QUICK ACCESS</span>
+        <span><kbd>M</kbd> MUTE</span>
+      </div>
+
+      <div class="text-right text-xs font-mono text-neutral-400">
+        <span>HOKKAIDO // 1603</span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Audio Prompt Pill (Fades out after first interaction) -->
+  <div id="audioPrompt" class="audio-prompt-pill" role="status">
+    <span>⚔️ CLICK ANYWHERE OR PRESS ANY KEY TO INITIALIZE SOUNDSCAPE</span>
+  </div>
+
+  <!-- Full-Screen Blade Slash & Drum Flash Overlay -->
+  <div id="cinematicFlash" class="opacity-0 pointer-events-none" aria-hidden="true">
+    <div class="flash-kanji">断</div>
+  </div>
+
+  <!-- Ghost of Yōtei Main Landing Script -->
+  <script type="module" src="js/landing/landing.js"></script>
+</body>
+</html>
