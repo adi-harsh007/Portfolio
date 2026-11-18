@@ -1,0 +1,2 @@
+# Ignore local server from Vercel static deployment
+server.js

@@ -82,7 +82,7 @@ Portfolio/
 Launch the zero-dependency local preview server:
 
 ```bash
-npm start
+npm run dev
 ```
 
 Or run directly with Node:

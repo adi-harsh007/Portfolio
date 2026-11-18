@@ -5,8 +5,8 @@
   "main": "index.html",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "preview": "node server.js"
   },
   "keywords": [
     "portfolio",
